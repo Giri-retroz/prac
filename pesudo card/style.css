@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    min-width: 100%;
+    height: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 2rem;
+    min-height: 100vh;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+}
+
+header,footer{
+    border-bottom: 3px solid black;
+    position: sticky;
+    background-color: rgb(143, 143, 143);
+    text-align: center;
+}
+
+header{
+    top: 0%;
+    
+}
+
+header h1{
+    background-color: black;
+    color: white;
+    padding-bottom: 0.7rem;
+}
+
+nav{
+    border-top: 3px solid black;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a,nav a:visited{
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover,nav a:focus{
+    color: rgba(0, 0, 0, 0.715);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+main{
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+footer{
+    bottom: 0%;
+}
+
+.profile-card{
+    scroll-margin-top: 8rem;
+    background-color:black;
+    width: min(100%,450px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.profile-card figure{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2rem;
+}
+
+.profile-card img{
+        border: 5px double white;
+        width:100%;
+        height:300px;
+        border-radius: 50% ;
+}
+
+.profile-card figcaption{
+    margin: 1rem;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.profile-card p{
+    text-align: center;
+}
+
+@media screen and (min-width:576px) {
+    main{
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .profile-card{
+        min-width:min(100%,auto) ;
+    }
+
+    .profile-card:last-child{
+        order: -1;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .profile-card{
+        min-width:min(100%,450px);
+        height: auto;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .profile-card:nth-child(2){
+        order: -1;
+    }
+}
+
+@media screen and (min-width:996px) {
+    .profile-card{
+        min-width:min(100%,450px);
+    }
+
+    .profile-card{
+        flex-flow: column;
+    }
+}
+@media screen and (min-width:1200px) {
+    .profile-card{
+        width:min(33%,-1rem,500px) ;
+    }
+
+}
+
